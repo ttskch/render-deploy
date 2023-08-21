@@ -1,0 +1,24 @@
+name: Render.com Deploy
+description: The most simple and customizable GitHub Action to deploy a service to Render.com.
+author: Takashi Kanemoto
+branding:
+  icon: upload-cloud
+  color: green
+inputs:
+  api-key:
+    description: Render.com API key
+    required: true
+  service-id:
+    description: ID of the service to deploy
+    required: true
+  interval:
+    description: Interval to check deploy status (sec)
+    required: false
+    default: "10"
+  timeout:
+    description: If deploy has not finished after this time, the action will fail (sec)
+    required: false
+    default: "600"
+runs:
+  using: node16
+  main: dist/index.js

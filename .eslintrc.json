@@ -1,0 +1,22 @@
+{
+  "extends": [
+    // https://github.com/eslint/eslint/blob/main/packages/js/src/configs/eslint-recommended.js
+    "eslint:recommended",
+    // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/recommended.ts
+    "plugin:@typescript-eslint/recommended",
+    // https://github.com/prettier/eslint-config-prettier/blob/main/index.js
+    "prettier"
+  ],
+  "plugins": ["import"],
+  "rules": {
+    // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md
+    "import/order": [
+      "error",
+      {
+        "alphabetize": {
+          "order": "asc"
+        }
+      }
+    ]
+  }
+}
